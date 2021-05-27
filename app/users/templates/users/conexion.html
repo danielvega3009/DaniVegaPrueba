@@ -1,0 +1,111 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <link rel="shortcut icon" href="http://nubecolectiva.com/favicon.ico" />
+
+    <meta name="theme-color" content="#000000" />
+
+    <title>Como crear un CRUD con Django 2 y Bootstrap 4 - Parte 2 (Python 3.7) </title>
+
+    {# Cargamos la librería #}
+    {% load bootstrap4 %}
+ 
+    {# CSS Bootstrap #}
+    {% bootstrap_css %} 
+
+	{# Widget Tweaks #}
+    {% load widget_tweaks %}
+
+    {# Archivos #}
+    {% load static %}
+
+    <link rel="stylesheet" type="text/css" href="{% static 'css/estilos.css' %}">       
+
+  </head>
+
+  <body> 
+
+    <header>
+      <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+      
+      </div>
+    </nav>
+    </header>
+
+    <div class="pccp mt-5 mb-3" align="center">
+              <!-- P -->
+              <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+              
+              <ins class="adsbygoogle"
+                   style="display:block"
+                   data-ad-client="ca-pub-2390065838671224"
+                   data-ad-slot="1441100372"
+                   data-ad-format="auto"
+                   data-full-width-responsive="true"></ins>
+              <script>
+              (adsbygoogle = window.adsbygoogle || []).push({});
+              </script>
+              <!-- End P -->
+    </div>
+
+    <main role="main">
+
+        <div class="container text-center mt-5">
+
+          <div class="row mb-4">
+            <div class="col-md-12">
+              <h1 style="font-size: 28px;">Conexiones entre usuarios </h1>              
+            </div>
+          </div>          
+
+          <div class="row mb-5">
+            <div class="col-md-10">
+
+              <div class="table-responsive">
+
+                <nav aria-label="breadcrumb mb-3">
+        					<ol class="breadcrumb">
+        					    <li class="breadcrumb-item"><a href="../">Usuarios</a></li>
+        					    <li class="breadcrumb-item active" aria-current="page">Editar</a></li>
+        					</ol>
+        				</nav>
+
+                <div class="formulario" align="left">
+
+                	<h4>Detalles</h4>
+
+        					<p><span class="txt_negrita">Usuario:</span> <br> {{object.nombre}}</p>
+        					<p><span class="txt_negrita">Usuario Conectado:</span> <br> {{object.connection}}</p>
+        					
+
+                  <a href="../" type="submit" class="btn btn-primary">Volver</a>
+
+                </div>
+                
+              </div>
+
+            </div>
+
+          </div>          
+
+          <hr>
+        </div>
+
+    </main>
+
+
+    <footer class="text-muted mt-3 mb-3">
+        <div align="center">
+          Desarrollado por <a>Daniel Vega</a>
+      </div> 
+    </footer>
+
+      {# JS y jQuery Bootstrap #}
+      {% bootstrap_javascript jquery='full' %} 
+    
+  </body>
+</html>
