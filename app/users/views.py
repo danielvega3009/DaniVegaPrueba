@@ -1,4 +1,7 @@
 from django.shortcuts import render
+import logging
+from django.shortcuts import get_object_or_404
+
 
 # Instanciamos las vistas genéricas de Django 
 from django.views.generic import ListView, DetailView 
@@ -56,5 +59,23 @@ class EliminarUsuario(SuccessMessageMixin, DeleteView):
         messages.success (self.request, (success_message))       
         return reverse('leer') # Redireccionamos a la vista principal 'leer'
 
-#class VerConexionUsuario(ListView): 
-   # model = Connections
+class VerConexionUsuario(ListView): 
+    model = Connections
+    form = Connections
+    #queryset = Connections.objects.filter(nombre='Dani')
+   # def show(request,user):
+      #  usuariosconectados = Connections.objects.filter(connection=user)
+      #  content = {
+      #  'usuariosconectados':usuariosconectados,
+      #  }
+      #  return render(request, 'conexion.html', content)
+    template_name = 'users/conexion.html'
+
+    #def get_queryset(self):
+       # self.nombre = get_object_or_404(Connections, nombre=self.kwargs['nombre'])
+       # print( self.nombre)
+       # return Connections.objects.filter(nombre=self.nombre)
+    def get_queryset(self):
+        return Connections.objects.filter(
+            nombre=self.kwargs.get('nombre')
+        )

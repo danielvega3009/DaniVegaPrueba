@@ -14,9 +14,12 @@ Including another URLconf
     2. Add a URL to urlpatterns:  path('blog/', include('blog.urls'))
 """
 from django.contrib import admin
+from django.conf.urls import url
+
 from django.urls import path
 #from django.views.generic import TemplateView
-from users.views import ListadoUsuarios, DetalleUsuario, CrearUsuario, ActualizarUsuario, EliminarUsuario#, VerConexionUsuario
+
+from users.views import ListadoUsuarios, DetalleUsuario, CrearUsuario, ActualizarUsuario, EliminarUsuario,VerConexionUsuario
 #from . import views
 
 urlpatterns = [
@@ -37,5 +40,6 @@ urlpatterns = [
     path('users/eliminar/<int:pk>', EliminarUsuario.as_view(), name='eliminar'),  
 
     # La ruta 'ver' usarios conectados a un usuario dado
-   path('users/conexiones/<int:pk>', DetalleUsuario.as_view(template_name = "users/conexion.html"), name='conexion'),
+   path('users/conexiones/<str:nombre>', VerConexionUsuario.as_view(template_name = "users/conexion.html"), name='conexion'),
+
 ]

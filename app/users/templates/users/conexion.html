@@ -9,7 +9,7 @@
 
     <meta name="theme-color" content="#000000" />
 
-    <title>Como crear un CRUD con Django 2 y Bootstrap 4 - Parte 2 (Python 3.7) </title>
+    <title>Conexiones entre usuarios </title>
 
     {# Cargamos la librería #}
     {% load bootstrap4 %}
@@ -67,22 +67,17 @@
 
               <div class="table-responsive">
 
-                <nav aria-label="breadcrumb mb-3">
-        					<ol class="breadcrumb">
-        					    <li class="breadcrumb-item"><a href="../">Usuarios</a></li>
-        					    <li class="breadcrumb-item active" aria-current="page">Editar</a></li>
-        					</ol>
-        				</nav>
-
+              
                 <div class="formulario" align="left">
 
-                	<h4>Detalles</h4>
+                    <p><span class="txt_negrita">Usuarios Conectados con {{object_list.0}}:</span> 
+                        <br>
+                   
+                    {% for object in object_list %}
+                        {{object.connection}} </p>
+                    {% endfor %}	
 
-        					<p><span class="txt_negrita">Usuario:</span> <br> {{object.nombre}}</p>
-        					<p><span class="txt_negrita">Usuario Conectado:</span> <br> {{object.connection}}</p>
-        					
-
-                  <a href="../" type="submit" class="btn btn-primary">Volver</a>
+                    <a href="../" type="submit" class="btn btn-primary">Volver</a>
 
                 </div>
                 

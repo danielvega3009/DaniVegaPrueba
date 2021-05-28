@@ -10,3 +10,5 @@ class Connections(models.Model):
     class Meta:
          db_table = 'connections' # Le doy de nombre 'postres' a nuestra tabla en la Base de Datos
 
+    def __str__(self):
+            return self.nombre
