@@ -11,9 +11,10 @@ Pasos para ejecutar:
 1-Abrir Terminal cd ruta app. Ej: "cd C:\Users\app"
 2-Una vez en el proyecto app, para activar el entorno virtual ejecutar: env/Scripts/activate 
 3-Instalar django: "pip install django" si no lo tenemos instalado
-4-Importar en la bbdd el fichero connections.sql
-4-Lanzar el proyecto: "python app/manage.py runserver"
-5-Abrir navegador localhost:8000/users para visualizar la app de users que hemos creado para la prueba.
+4-Iniciar servidor Apache.
+5-Importar en la bbdd el fichero connections.sql
+6-Lanzar el proyecto: "python app/manage.py runserver"
+7-Abrir navegador localhost:8000/users para visualizar la app de users que hemos creado para la prueba.
 
 Acciones disponibles en la aplicación:
   Crear  Usuario con usuario conectado
