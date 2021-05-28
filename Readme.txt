@@ -1,4 +1,4 @@
-He creado un proyecto Python con el Framework Django, para ello he creado un entorno virtual,,necesario para dicho framework,
+He creado un proyecto Python con el Framework Django, para ello he creado un entorno virtual,necesario para dicho framework,
 en la carpeta env con "pip install virtualenv" y "python -m venv env" para darle el nombre env a dicho entorno.
 
 Dentro de app tenemos la app principal que enlaza con la aplicación users, que es la aplicación que se ha realizado para
